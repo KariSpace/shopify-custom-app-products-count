@@ -1,3 +1,11 @@
+Test task №2:
+
+![IMAGE 2025-02-13 12:05:54](https://github.com/user-attachments/assets/d43e9290-10e3-44e9-b290-53662e69c122)
+
+![IMAGE 2025-02-13 12:03:47](https://github.com/user-attachments/assets/e240b507-4f8f-4f9f-aba5-d66a31e099da)
+
+
+
 # Shopify App Template - Remix
 
 This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using the [Remix](https://remix.run) framework.
