@@ -1,0 +1,36 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "5e3b15794b49a634ea34a975428c53b7"
+application_url = "https://famous-quarters-penalties-arguments.trycloudflare.com"
+embedded = true
+name = "kari-test"
+handle = "kari-test-1"
+
+[build]
+include_config_on_deploy = true
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-01"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://famous-quarters-penalties-arguments.trycloudflare.com/auth/callback",
+  "https://famous-quarters-penalties-arguments.trycloudflare.com/auth/shopify/callback",
+  "https://famous-quarters-penalties-arguments.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
