@@ -11,7 +11,7 @@ export const loader = async ({ request }) => {
   const response = await admin.graphql(
     `#graphql
       {
-        products(first: 100) {
+        products(first: 100, query: "status:ACTIVE") {
           edges {
             node {
               id,
@@ -28,7 +28,7 @@ export const loader = async ({ request }) => {
     });
 
   const products = response ? response.data.products.edges : [];
-  console.log(`Number of products: ${products.length}`);
+  console.log(`Number of active products: ${products.length}`);
   return json({ products });
 };
 
